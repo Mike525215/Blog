@@ -1,0 +1,85 @@
+header{
+    width: 80%;
+    margin: 0 auto;
+    height: 150px;
+}
+.menu > span > a{
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-size: 40px;
+    float: left;
+    color: #111111;
+    text-decoration: none;
+    padding: 8px;
+}
+header > ul{
+    display: flex;
+    justify-content: flex-end;
+}
+header > ul > li{
+    padding: 18px;
+    list-style: none;
+    line-height: 40px;
+}
+
+header > ul > li > a{
+    text-decoration: none;
+    color: #111111;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-size: 20px;
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.content > span{
+    font-size: 30px;
+    color: #111111;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
+.content > ul{
+    display: flex;
+    justify-content: center;
+}
+.content > ul > li{
+    display: inline-block;
+    list-slyle: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sign_up_form{
+    width: 25%;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.create_blog{
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;
+}
+.detail_text{
+    width: 80%;
+    margin: 0 auto;
+}
+.photo{
+    text-align: center;
+}
+.photo > img{
+    width: 100%;
+    height: 500px;
+}
+.text{
+    text-align: left;
+}
+.detail_text > h1{
+    font-size: 60px;
+    text-align: center;
+}
+.page_pagination{
+    width: 27rem;
+    margin: 0 auto;
+}

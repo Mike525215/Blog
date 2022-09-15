@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="content">
+        <span>All blogs</span>
+        <hr>
+            <ul>
+                {% for x in blogs %}
+                    <li>
+                        <div class="card text-center" style="width: 27rem; margin: 0 auto;">
+                            <img src="{{ x.blog_photo.url }}" class="card-img-top" alt="..." style="width: 100%; height: 234px;">
+                            <div class="card-body">
+                                <span class="card-title" style="font-size: 18px;">{{ x.title|truncatechars:40 }}</span>
+                                <p class="card-text">{{ x.content|truncatechars:15}}</p>
+                                <p class="card-text">{{ x.user }}</p>
+                                <a href="{{ x.get_absolute_url }}" class="btn btn-primary">Detail</a>
+
+                                {% if x.user == request.user %}
+                                    <a href="{% url 'modified_blog' x.id %}" class="btn btn-warning">Modified</a>
+                                    <a href="{% url 'delete_blog' x.id %}" class="btn btn-danger">Delete</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+
+
+        <div class="page_pagination">
+            <nav aria-label="Page navigation example">
+                {% if paginator.num_pages > 1 %}
+                  <ul class="pagination">
+                      {% for x in paginator.page_range %}
+                        <li class="page-item"><a class="page-link" href="?page={{ x }}">{{ x }}</a></li>
+                      {% endfor %}
+                  </ul>
+                {% endif %}
+            </nav>
+        </div>
+    </div>
+{% endblock %}

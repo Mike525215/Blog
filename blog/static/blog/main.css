@@ -80,7 +80,6 @@ header > ul > li > a{
     text-align: center;
 }
 .page_pagination{
-    width: 27rem;
+    width: 15%;
     margin: 0 auto;
-    text-align: center;
 }

@@ -6,8 +6,6 @@ from blog.models import *
 from django.views.generic import CreateView, ListView, DetailView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator
-from django.views.generic.edit import FormMixin
 class Index(ListView):
     paginate_by = 2
     model = Blog
@@ -17,7 +15,6 @@ class Index(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Main page'
-        paginator = Paginator(Blog.objects.all(), 3)
         return context
 
 
